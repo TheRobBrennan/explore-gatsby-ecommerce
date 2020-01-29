@@ -1,0 +1,16 @@
+{
+  "name": "explore-gatsby-ecommerce",
+  "version": "0.0.0",
+  "description": "This project has been created to explore some initial thoughts and ideas when working with Gatsby and ecommerce.",
+  "keywords": ["gatsby", "ecommerce"],
+  "author": "Rob Brennan <rob@therobbrennan.com> (therobbrennan.com)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheRobBrennan/explore-gatsby-ecommerce.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheRobBrennan/explore-gatsby-ecommerce/issues"
+  },
+  "homepage": "https://github.com/TheRobBrennan/explore-gatsby-ecommerce#readme"
+}
