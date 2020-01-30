@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 const IndexPage = () => {
   const stripeTestApiKey = "pk_test_OYSwXOmUEJLnvMkoCktnbESY00hR7YrcUs"
   // REMEMBER: window is not available in server side rendering (SSR)
-  const stripe = window.Stripe(stripeTestApiKey) || undefined
+  const stripe = (window) ? window.Stripe(stripeTestApiKey) : undefined
 
   return (
     <Layout>
