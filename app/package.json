@@ -27,6 +27,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "debug": "node --inspect=0.0.0.0 --no-lazy node_modules/gatsby/dist/bin/gatsby develop -H 0.0.0.0",
     "build": "gatsby build",
     "develop": "gatsby develop -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
