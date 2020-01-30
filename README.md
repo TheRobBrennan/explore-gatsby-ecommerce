@@ -2,7 +2,7 @@
 
 This project has been created to explore some initial thoughts and ideas when working with Gatsby and ecommerce.
 
-You can view the latest [DEMO](https://explore-gatsby-ecommerce.now.sh) code at [https://explore-gatsby-ecommerce.now.sh](https://explore-gatsby-ecommerce.now.sh)
+You can view the latest [DEMO](https://explore-gatsby-ecommerce.now.sh) at [https://explore-gatsby-ecommerce.now.sh](https://explore-gatsby-ecommerce.now.sh)
 
 ## Getting started
 
@@ -82,7 +82,30 @@ The GraphiQL IDE should be available at [http://localhost:8000/___graphql](http:
 
 ### Deployment to ZEIT Now
 
-As an added bonus, I wanted to configure this project so that I can deploy it to my favorite static and [JAMstack](https://jamstack.org) host - [ZEIT Now](https://zeit.co).
+As a bonus, I wanted to configure this project so that I can deploy it to my favorite static and [JAMstack](https://jamstack.org) host - [ZEIT Now](https://zeit.co).
+
+Feel free to configure `now.json` to match a project name for your (free) [ZEIT Now](https://zeit.co) account and then you can deploy the site with:
+
+```sh
+$ npm run deploy
+
+> explore-gatsby-ecommerce@0.0.0 deploy /Users/rob/repos/explore-gatsby-ecommerce
+> npm run deploy:zeit-now
+
+
+> explore-gatsby-ecommerce@0.0.0 deploy:zeit-now /Users/rob/repos/explore-gatsby-ecommerce
+> now --prod
+
+> Deploying ~/repos/explore-gatsby-ecommerce under therobbrennan
+> Using project explore-gatsby-ecommerce
+> Synced 1 file [2s]
+> https://explore-gatsby-ecommerce-jfow89xq2.now.sh [2s]
+> Ready! Deployment complete [51s]
+- https://explore-gatsby-ecommerce.now.sh
+- [in clipboard]
+```
+
+In the example deployment above, note that our site is available at [https://explore-gatsby-ecommerce.now.sh](https://explore-gatsby-ecommerce.now.sh) as well as a link to this specific deployment [https://explore-gatsby-ecommerce-jfow89xq2.now.sh](https://explore-gatsby-ecommerce-jfow89xq2.now.sh) along with the free `.now.sh` [URL](https://explore-gatsby-ecommerce.now.sh) associated with your project.
 
 ## Additional resources
 
