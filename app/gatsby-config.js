@@ -5,6 +5,7 @@ module.exports = {
     author: `@therobbrennan`,
   },
   plugins: [
+    'gatsby-plugin-stripe',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
