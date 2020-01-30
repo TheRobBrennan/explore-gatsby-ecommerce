@@ -6,6 +6,7 @@
   "author": "Rob Brennan <rob@therobbrennan.com> (therobbrennan.com)",
   "license": "ISC",
   "scripts": {
+    "debug": "cd app && npm run debug",
     "start": "docker-compose up",
     "build": "docker-compose up --remove-orphans --build --force-recreate",
     "stop": "docker-compose down",
