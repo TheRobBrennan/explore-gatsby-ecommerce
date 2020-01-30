@@ -6,10 +6,12 @@ services:
     build:
       context: ./app
       dockerfile: ./Dockerfile
-    command: sh -c "npm run develop"
+    command: sh -c "npm run debug"
     ports:
       - '8000:8000'
+      - '9229:9229'
     volumes:
+      # Pass these local folders through to Docker
       - './app:/app'
       # Use these folders from the Docker container and NOT the local development environment
       - '/app/node_modules'
