@@ -1,0 +1,24 @@
+{
+  "name": "explore-gatsby-ecommerce",
+  "version": "0.0.0",
+  "description": "This project has been created to explore some initial thoughts and ideas when working with Gatsby and ecommerce.",
+  "keywords": ["gatsby", "ecommerce"],
+  "author": "Rob Brennan <rob@therobbrennan.com> (therobbrennan.com)",
+  "license": "ISC",
+  "scripts": {
+    "start": "docker-compose up",
+    "build": "docker-compose up --remove-orphans --build --force-recreate",
+    "stop": "docker-compose down",
+    "docker:nuke": "docker system prune -a && docker volume prune",
+    "deploy": "npm run deploy:zeit-now",
+    "deploy:zeit-now": "now --prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheRobBrennan/explore-gatsby-ecommerce.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheRobBrennan/explore-gatsby-ecommerce/issues"
+  },
+  "homepage": "https://github.com/TheRobBrennan/explore-gatsby-ecommerce#readme"
+}
