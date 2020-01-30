@@ -2,7 +2,7 @@
 
 This project has been created to explore some initial thoughts and ideas when working with Gatsby and ecommerce.
 
-You can view the latest [DEMO](https://explore-gatsby-ecommerce.now.sh) code at [https://explore-gatsby-ecommerce.now.sh](https://explore-gatsby-ecommerce.now.sh)
+You can view the latest [DEMO](https://explore-gatsby-ecommerce.now.sh) at [https://explore-gatsby-ecommerce.now.sh](https://explore-gatsby-ecommerce.now.sh)
 
 ## Getting started
 
