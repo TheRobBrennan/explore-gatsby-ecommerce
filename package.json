@@ -9,7 +9,9 @@
     "start": "docker-compose up",
     "build": "docker-compose up --remove-orphans --build --force-recreate",
     "stop": "docker-compose down",
-    "docker:nuke": "docker system prune -a && docker volume prune"
+    "docker:nuke": "docker system prune -a && docker volume prune",
+    "deploy": "npm run deploy:zeit-now",
+    "deploy:zeit-now": "now --prod"
   },
   "repository": {
     "type": "git",
