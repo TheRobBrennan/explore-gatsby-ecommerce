@@ -6,9 +6,21 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => {
-  const stripeTestApiKey = "pk_test_OYSwXOmUEJLnvMkoCktnbESY00hR7YrcUs"
+  const STRIPE_API_KEY_TEST = "pk_test_OYSwXOmUEJLnvMkoCktnbESY00hR7YrcUs"
   // REMEMBER: window is not available in server side rendering (SSR)
-  const stripe = (typeof window !== `undefined`) ? window.Stripe(stripeTestApiKey) : undefined
+  const stripe = (typeof window !== `undefined`) ? window.Stripe(STRIPE_API_KEY_TEST) : undefined
+  try {
+    stripe.redirectToCheckout({
+      items: [
+        {
+          sku: "sku_GdihsjWhbSPkXb",
+          quantity: 1,
+        }
+      ]
+    })
+  } catch (e) {
+    console.error('Whoops.', e)
+  }
 
   return (
     <Layout>
