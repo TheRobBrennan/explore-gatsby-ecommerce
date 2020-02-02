@@ -34,7 +34,6 @@ const Product = () => {
 
   return (
     <Layout>
-      <SEO title='Home' />
       <div>
         <article>
           <img
