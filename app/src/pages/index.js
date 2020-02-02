@@ -2,15 +2,13 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Product from "../components/product"
+import Products from "../components/products"
 
 const IndexPage = () => {
   return (
     <Layout>
       <SEO title='Home' />
-      <div>
-        <Product />
-      </div>
+      <Products />
     </Layout>
   )
 }
