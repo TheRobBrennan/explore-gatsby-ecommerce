@@ -8,33 +8,44 @@ import SEO from "../components/seo"
 export const STRIPE_API_KEY_TEST = "pk_test_OYSwXOmUEJLnvMkoCktnbESY00hR7YrcUs"
 
 const IndexPage = () => {
-  // REMEMBER: window is not available in server side rendering (SSR)
-  const stripe = (typeof window !== `undefined`) ? window.Stripe(STRIPE_API_KEY_TEST) : undefined
-  try {
-    stripe.redirectToCheckout({
-      items: [
-        {
-          sku: "sku_GdihsjWhbSPkXb",
-          quantity: 1,
-        }
-      ],
-      successUrl: 'http://localhost:8000',
-      cancelUrl: 'http://localhost:8000',
-    })
-  } catch (e) {
-    console.error('Whoops.', e)
+  const placeOrder = sku => {
+    // REMEMBER: window is not available in server side rendering (SSR)
+    const stripe =
+      typeof window !== `undefined`
+        ? window.Stripe(STRIPE_API_KEY_TEST)
+        : undefined
+    try {
+      stripe.redirectToCheckout({
+        items: [
+          {
+            sku,
+            quantity: 1,
+          },
+        ],
+        successUrl: "http://localhost:8000/success",
+        cancelUrl: "http://localhost:8000/cancel",
+      })
+    } catch (e) {
+      console.error("Whoops.", e)
+    }
   }
 
   return (
     <Layout>
       <SEO title='Home' />
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
+      <h1>My store</h1>
+      <div>
+        <article>
+          <img
+            src='https://picsum.photos/340/400'
+            alt="A sample t-shirt that doesn't exist and will never ship."
+          />
+          <h3>Sample T-Shirt</h3>
+          <button onClick={() => placeOrder("sku_GdihsjWhbSPkXb")}>
+            Buy Me
+          </button>
+        </article>
       </div>
-      <Link to='/page-2/'>Go to page 2</Link>
     </Layout>
   )
 }
