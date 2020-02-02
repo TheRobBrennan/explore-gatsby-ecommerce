@@ -16,7 +16,9 @@ const IndexPage = () => {
           sku: "sku_GdihsjWhbSPkXb",
           quantity: 1,
         }
-      ]
+      ],
+      successUrl: 'http://localhost:8000',
+      cancelUrl: 'http://localhost:8000',
     })
   } catch (e) {
     console.error('Whoops.', e)
