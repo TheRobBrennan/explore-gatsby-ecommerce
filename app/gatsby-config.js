@@ -14,6 +14,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-stripe`,
+      options: {
+        // See https://www.gatsbyjs.org/packages/gatsby-source-stripe/#supported-list-of-types for a list of values we can supply here
+        objects: ['Product', 'Sku'],
+        // TODO: This secret key should come from an environment variable; however this is just a test store so we can be OK with this for now
+        secretKey: 'sk_test_GRsEBfERbZTngoVJNYFpvPCv00UiHERa0Q',
+        downloadFiles: true,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
